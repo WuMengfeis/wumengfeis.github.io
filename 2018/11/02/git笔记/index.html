@@ -29,7 +29,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="icon-home image-icon" href="javascript:;"></a>
     <div title="播放/暂停" class="icon-play"></div>
-    <h3 class="subtitle">Hello World</h3>
+    <h3 class="subtitle">git笔记</h3>
     <div class="social">
         <!--<div class="like-icon">-->
             <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -46,22 +46,28 @@
     <div class="section">
         <div class="article">
     <div class="main">
-        <h1 class="title">Hello World</h1>
+        <h1 class="title">git笔记</h1>
         <div class="stuff">
-            <span>十一月 01, 2018</span>
+            <span>十一月 02, 2018</span>
             
 
         </div>
         <div class="content markdown">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <h3 id="有网的时候："><a href="#有网的时候：" class="headerlink" title="有网的时候："></a>有网的时候：</h3><p>1、建立一个远程仓库</p>
+<p>2、将远程仓库克隆到本地（git clone 网址）//shift+insert 复制</p>
+<p>3、git config –list //查看配置</p>
+<p>4、git config –(加入自己的邮箱和名字)</p>
+<p>5、在本地仓库中增添内容</p>
+<p>6、git status //查看状态<br>   //git config –global core.quotepath false 解决中文问题</p>
+<p>7、将工作区的内容添加到到暂存区<br>  （1、git add .//将全部文件添加到暂存区 2、git add 文件名//将指定的文件添加到暂存区）</p>
+<p>8、git status //查看状态</p>
+<p>9、将暂存区的内容提交到远程仓库（git commit -m “提交说明”）</p>
+<p>10、git log  查看状态<br>或者 git log –oneline 将查看的状态显示在一行</p>
+<p>11、git remote -v 查看远程信息</p>
+<p>12、将本地仓库的内容推送到远程仓库 （git push origin master）</p>
+<hr>
+<h3 id="没网的时候："><a href="#没网的时候：" class="headerlink" title="没网的时候："></a>没网的时候：</h3><p>1、在本地初始化仓库（git init）</p>
+<p>2、参考上面的步骤（2—10步）</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
