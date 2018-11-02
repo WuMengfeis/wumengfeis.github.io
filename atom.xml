@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>努力吧，未来是你的</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-11-02T11:11:24.227Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>wumengfei</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git笔记</title>
+    <link href="http://yoursite.com/2018/11/02/git%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2018/11/02/git笔记/</id>
+    <published>2018-11-02T11:10:35.000Z</published>
+    <updated>2018-11-02T11:11:24.227Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="有网的时候："><a href="#有网的时候：" class="headerlink" title="有网的时候："></a>有网的时候：</h3><p>1、建立一个远程仓库</p><p>2、将远程仓库克隆到本地（git clone 网址）//shift+insert 复制</p><p>3、git config –list //查看配置</p><p>4、git config –(加入自己的邮箱和名字)</p><p>5、在本地仓库中增添内容</p><p>6、git status //查看状态<br>   //git config –global core.quotepath false 解决中文问题</p><p>7、将工作区的内容添加到到暂存区<br>  （1、git add .//将全部文件添加到暂存区 2、git add 文件名//将指定的文件添加到暂存区）</p><p>8、git status //查看状态</p><p>9、将暂存区的内容提交到远程仓库（git commit -m “提交说明”）</p><p>10、git log  查看状态<br>或者 git log –oneline 将查看的状态显示在一行</p><p>11、git remote -v 查看远程信息</p><p>12、将本地仓库的内容推送到远程仓库 （git push origin master）</p><hr><h3 id="没网的时候："><a href="#没网的时候：" class="headerlink" title="没网的时候："></a>没网的时候：</h3><p>1、在本地初始化仓库（git init）</p><p>2、参考上面的步骤（2—10步）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;有网的时候：&quot;&gt;&lt;a href=&quot;#有网的时候：&quot; class=&quot;headerlink&quot; title=&quot;有网的时候：&quot;&gt;&lt;/a&gt;有网的时候：&lt;/h3&gt;&lt;p&gt;1、建立一个远程仓库&lt;/p&gt;
+&lt;p&gt;2、将远程仓库克隆到本地（git clone 网址）//shift+in
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>在linux上使用git上传文件到码云上</title>
+    <link href="http://yoursite.com/2018/11/02/%E5%9C%A8linux%E4%B8%8A%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%88%B0%E7%A0%81%E4%BA%91%E4%B8%8A/"/>
+    <id>http://yoursite.com/2018/11/02/在linux上使用git上传文件到码云上/</id>
+    <published>2018-11-02T10:54:16.000Z</published>
+    <updated>2018-11-02T10:57:41.170Z</updated>
+    
+    <content type="html"><![CDATA[<p>#在linux上使用git上传文件到码云上</p><p><a href="https://blog.csdn.net/lhj_168/article/details/60576098" target="_blank" rel="noopener">https://blog.csdn.net/lhj_168/article/details/60576098</a></p><p>1.首先安装git：sudo apt-get install git </p><p>2.添加ssh公钥到码云：<a href="http://git.mydoc.io/?t=154712" target="_blank" rel="noopener">http://git.mydoc.io/?t=154712</a></p><ul><li>ssh-keygen -t rsa -C “<a href="mailto:youremail@example.com" target="_blank" rel="noopener">youremail@example.com</a>“       </li><li>#在linux终端执行该命令，然后三次回车，生成ssh公钥</li><li>cat ~/.ssh/id_rsa.pub     #查看生成的ssh公钥</li><li>添加后，在终端（Terminal）中输入：ssh -T <a href="mailto:git@gitee.com" target="_blank" rel="noopener">git@gitee.com</a></li><li>若返回：Welcome to Gitee.com, yourname!  则添加成功</li></ul><p>3.在码云上建立一个仓库：假设名称为MyProject</p><p>4.在linux上建立一个目录（最好与远程同名）：<br>mkdir MyProject<br>cd MyProject</p><p>5.初始化git：git init</p><p>6.将要上传的的文件复制到此目录：cp</p><p>7.git remote add origin ssh链接               //设置码云上对应项目的ssh链接,origin为链接名称,可自定义<br>//若要删除可用命令:  git remote rm origin<br>git pull –rebase origin master             //取回项目的master分支,并与本地的合并,若不合并push会失败<br>git push origin master                      //推送master分支到码云上，登录码云即可看见刚推送的项目了</p><p>8.再此目录上可以写一个自动上传的脚本：vim push.sh<br>(#!/bin/sh<br>git add .<br>git commit -m “Summer_task”<br>git push origin master)<br>如果没有脚本就手动输入以上内容</p><p>9.运行脚本：bash push.sh<br>如果出现以下错误</p><blockquote><p>*** 请告诉我你是谁。</p></blockquote><blockquote><p>运行</p></blockquote><blockquote><p>git config –global user.email “<a href="mailto:you@example.com" target="_blank" rel="noopener">you@example.com</a>“<br>git config –global user.name “Your Name”</p></blockquote><blockquote><p>来设置您账号的缺省身份标识。<br>如果仅在本仓库设置身份标识，则省略 –global 参数。<br>fatal: unable to auto-detect email address (got ‘root@debian.(none)’)<br>error: src refspec master does not match any.<br>error: 无法推送一些引用到 <a href="mailto:&#39;git@gitee.com" target="_blank" rel="noopener">&#39;git@gitee.com</a>:wumengfei666/Task_Summer.git’</p></blockquote><p>则运行以下命令<br>git config –global user.name “yourname”                              #设定自定义的昵称<br>git config –global user.user.email  “<a href="mailto:youremail@example.com" target="_blank" rel="noopener">youremail@example.com</a>“          #设定自己的邮箱</p><p>9.然后再执行脚本<br>如果出现以下错误</p><blockquote><p>fatal: 当前分支 master 没有对应的上游分支。<br>为推送当前分支并建立与远程上游的跟踪，使用</p></blockquote><blockquote><p>  git push –set-upstream origin master</p></blockquote><blockquote><p>root@debian:/etc/wmf/Task_Summer# bash ../push.sh<br>位于分支 master<br>无文件要提交，干净的工作区<br>To gitee.com:wumengfei666/Task_Summer.git<br>! [rejected]        master -&gt; master (fetch first)<br>error: 无法推送一些引用到 <a href="mailto:&#39;git@gitee.com" target="_blank" rel="noopener">&#39;git@gitee.com</a>:wumengfei666/Task_Summer.git’<br>提示：更新被拒绝，因为远程仓库包含您本地尚不存在的提交。这通常是因为另外<br>提示：一个仓库已向该引用进行了推送。再次推送前，您可能需要先整合远程变更<br>提示：（如 ‘git pull …’）。<br>提示：详见 ‘git push –help’ 中的 ‘Note about fast-forwards’ 小节。</p></blockquote><p>则执行以下代码：<br>git pull –rebase origin master             //取回项目的master分支,并与本地的合并,若不合并push会失败<br>git push origin master                      //推送master分支到码云上，登录码云即可看见刚推送的项目了</p><p>10.如出现以下错误</p><blockquote><p>To gitee.com:wumengfei666/Task_Summer.git<br>! [rejected]        master -&gt; master (non-fast-forward)<br>error: 无法推送一些引用到 <a href="mailto:&#39;git@gitee.com" target="_blank" rel="noopener">&#39;git@gitee.com</a>:wumengfei666/Task_Summer.git’<br>提示：更新被拒绝，因为您当前分支的最新提交落后于其对应的远程分支。<br>提示：再次推送前，先与远程变更合并（如 ‘git pull …’）。详见<br>提示：’git push –help’ 中的 ‘Note about fast-forwards’ 小节。</p></blockquote><p>则执行以下命令：<br>git remote add origin <a href="https://gitee.com/wumegfei666/MyProject.git" target="_blank" rel="noopener">https://gitee.com/wumegfei666/MyProject.git</a><br>$git fetch origin<br>$git merge origin/master</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;#在linux上使用git上传文件到码云上&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/lhj_168/article/details/60576098&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>基本mariadb的增删改查</title>
+    <link href="http://yoursite.com/2018/11/01/%E5%9F%BA%E6%9C%ACmariadb%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/"/>
+    <id>http://yoursite.com/2018/11/01/基本mariadb的增删改查/</id>
+    <published>2018-11-01T09:23:58.000Z</published>
+    <updated>2018-11-01T09:28:48.948Z</updated>
+    
+    <content type="html"><![CDATA[<p>1、创建一个数据库   create database wumengfei;</p><p>2、使用数据库   use wumengfei;</p><p>3、查看数据库   show databases;</p><p>4、创建一个表格   MariaDB [wumengfei]&gt; create table ww(<br>    -&gt; name varchar(10),<br>    -&gt; sex varchar(3));<br>Query OK, 0 rows affected (0.15 sec)</p><p>5、在表格中添加元素   insert into www value(“a”,”A”);</p><p>6、查看表格元素   select * from www;</p><p>7、删除表格元素   delete from www where name=”a”;</p><p>8、更改表格元素   update www set name=”b” where sex=”nan”;</p><p>9、根据表格的一个属性（后面的）来查找另一个属性（前面的）<br>    select sex from www where name=”y”;</p><p>10、删除表格   drop database wumengfei;</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1、创建一个数据库   create database wumengfei;&lt;/p&gt;
+&lt;p&gt;2、使用数据库   use wumengfei;&lt;/p&gt;
+&lt;p&gt;3、查看数据库   show databases;&lt;/p&gt;
+&lt;p&gt;4、创建一个表格   MariaDB [wumeng
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2018/11/01/hello-world/"/>
+    <id>http://yoursite.com/2018/11/01/hello-world/</id>
+    <published>2018-11-01T08:04:57.164Z</published>
+    <updated>2018-11-01T08:04:57.164Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
