@@ -105,17 +105,17 @@
 
 
 
-<meta name="description" content="有网的时候：1、建立一个远程仓库 2、将远程仓库克隆到本地（git clone 网址）//shift+insert 复制 3、git config –list //查看配置 4、git config –(加入自己的邮箱和名字) 5、在本地仓库中增添内容 6、git status //查看状态   //git config –global core.quotepath false 解决中文问题 7、">
+<meta name="description" content="#配置双Python环境：  首先查看Python目录：whereis  Python 然后删除Python2：rm -rf python 创建Python3链接到原python2的目录上：ln -s /usr/bin/python3 /usr/bin/python 然后运行python2和python3：python和python2 最后装上pip2和pip3：sudo apt-get inst">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git笔记">
-<meta property="og:url" content="http://yoursite.com/2018/11/02/git笔记/index.html">
+<meta property="og:title" content="努力吧，未来是你的">
+<meta property="og:url" content="http://yoursite.com/2019/03/28/配置双Python环境/index.html">
 <meta property="og:site_name" content="努力吧，未来是你的">
-<meta property="og:description" content="有网的时候：1、建立一个远程仓库 2、将远程仓库克隆到本地（git clone 网址）//shift+insert 复制 3、git config –list //查看配置 4、git config –(加入自己的邮箱和名字) 5、在本地仓库中增添内容 6、git status //查看状态   //git config –global core.quotepath false 解决中文问题 7、">
+<meta property="og:description" content="#配置双Python环境：  首先查看Python目录：whereis  Python 然后删除Python2：rm -rf python 创建Python3链接到原python2的目录上：ln -s /usr/bin/python3 /usr/bin/python 然后运行python2和python3：python和python2 最后装上pip2和pip3：sudo apt-get inst">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-02T11:11:24.227Z">
+<meta property="og:updated_time" content="2018-07-13T09:44:37.251Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git笔记">
-<meta name="twitter:description" content="有网的时候：1、建立一个远程仓库 2、将远程仓库克隆到本地（git clone 网址）//shift+insert 复制 3、git config –list //查看配置 4、git config –(加入自己的邮箱和名字) 5、在本地仓库中增添内容 6、git status //查看状态   //git config –global core.quotepath false 解决中文问题 7、">
+<meta name="twitter:title" content="努力吧，未来是你的">
+<meta name="twitter:description" content="#配置双Python环境：  首先查看Python目录：whereis  Python 然后删除Python2：rm -rf python 创建Python3链接到原python2的目录上：ln -s /usr/bin/python3 /usr/bin/python 然后运行python2和python3：python和python2 最后装上pip2和pip3：sudo apt-get inst">
 
 
 
@@ -145,13 +145,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/02/git笔记/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/28/配置双Python环境/">
 
 
 
 
 
-  <title>git笔记 | 努力吧，未来是你的</title>
+  <title> | 努力吧，未来是你的</title>
   
 
 
@@ -262,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/02/git笔记/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/28/配置双Python环境/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wumengfei">
@@ -279,7 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git笔记</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -291,8 +291,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-02T19:10:35+08:00">
-                2018-11-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-28T18:27:02+08:00">
+                2019-03-28
               </time>
             
 
@@ -323,7 +323,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  240
+                  354
                 </span>
               
 
@@ -339,7 +339,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  2
                 </span>
               
             </div>
@@ -360,21 +360,16 @@
       
 
       
-        <h3 id="有网的时候："><a href="#有网的时候：" class="headerlink" title="有网的时候："></a>有网的时候：</h3><p>1、建立一个远程仓库</p>
-<p>2、将远程仓库克隆到本地（git clone 网址）//shift+insert 复制</p>
-<p>3、git config –list //查看配置</p>
-<p>4、git config –(加入自己的邮箱和名字)</p>
-<p>5、在本地仓库中增添内容</p>
-<p>6、git status //查看状态<br>   //git config –global core.quotepath false 解决中文问题</p>
-<p>7、将工作区的内容添加到到暂存区<br>  （1、git add .//将全部文件添加到暂存区 2、git add 文件名//将指定的文件添加到暂存区）</p>
-<p>8、git status //查看状态</p>
-<p>9、将暂存区的内容提交到远程仓库（git commit -m “提交说明”）</p>
-<p>10、git log  查看状态<br>或者 git log –oneline 将查看的状态显示在一行</p>
-<p>11、git remote -v 查看远程信息</p>
-<p>12、将本地仓库的内容推送到远程仓库 （git push origin master）</p>
-<hr>
-<h3 id="没网的时候："><a href="#没网的时候：" class="headerlink" title="没网的时候："></a>没网的时候：</h3><p>1、在本地初始化仓库（git init）</p>
-<p>2、参考上面的步骤（2—10步）</p>
+        <p>#配置双Python环境：</p>
+<ul>
+<li>首先查看Python目录：whereis  Python</li>
+<li>然后删除Python2：rm -rf python</li>
+<li>创建Python3链接到原python2的目录上：ln -s /usr/bin/python3 /usr/bin/python</li>
+<li>然后运行python2和python3：python和python2</li>
+<li>最后装上pip2和pip3：sudo apt-get install python3-pip python-pip</li>
+</ul>
+<h1 id="传统爬虫"><a href="#传统爬虫" class="headerlink" title="传统爬虫"></a>传统爬虫</h1><p>1.代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> time <span class="keyword">as</span> tm</span><br><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">from</span> pymongo <span class="keyword">import</span> MongoClient</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_str_sha</span><span class="params">(str)</span>:</span></span><br><span class="line">    sha = hashlib.sha1(str)</span><br><span class="line">    <span class="keyword">return</span> sha.hexdigest()</span><br><span class="line">user_id = <span class="string">"201703401"</span></span><br><span class="line">passwd = <span class="string">"201703401"</span></span><br><span class="line">LoginUrl = <span class="string">"http://221.233.24.23/eams/login.action"</span></span><br><span class="line">Url = <span class="string">"http://221.233.24.23/eams/stdDetail.action"</span></span><br><span class="line">client = MongoClient(<span class="string">"192.168.244.137"</span>,<span class="number">27017</span>)</span><br><span class="line">db = client[<span class="string">"mydb"</span>]</span><br><span class="line">col = db[<span class="string">"students"</span>]</span><br><span class="line"></span><br><span class="line">Header = &#123;</span><br><span class="line">        <span class="string">"User-Agent"</span> : <span class="string">"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"</span>,</span><br><span class="line">       <span class="comment"># "Cookie" : "semester.id=48; JSESSIONID=94C5B1089F6A9634033AC62808407116.node132; adc-ck-jwxt_pools=IEALAKAK; GSESSIONID=94C5B1089F6A9634033AC62808407116.node132",</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">s = requests.Session()</span><br><span class="line">req = s.get(LoginUrl)</span><br><span class="line">html = req.text</span><br><span class="line"></span><br><span class="line">res = re.search(<span class="string">"CryptoJS.SHA1\(\'(.*)\' "</span>,html)</span><br><span class="line">opasswd = res.group(<span class="number">1</span>)</span><br><span class="line">passwd = get_str_sha((opasswd+passwd).encode(<span class="string">"utf-8"</span>))</span><br><span class="line">print(passwd)</span><br><span class="line">tm.sleep(<span class="number">2</span>)</span><br><span class="line">Data = &#123;</span><br><span class="line">    <span class="string">"username"</span> : user_id,</span><br><span class="line">    <span class="string">"password"</span> : passwd,</span><br><span class="line">    <span class="string">"encodedPassword:"</span> : <span class="string">""</span>,</span><br><span class="line">    <span class="string">"session_locale"</span> : <span class="string">"zh_CN"</span>,</span><br><span class="line">&#125;</span><br><span class="line">req = s.post(LoginUrl,data=Data)</span><br><span class="line">print(req.text)</span><br><span class="line"></span><br><span class="line">InfoUrl = <span class="string">"http://221.233.24.23/eams/stdDetail.action"</span></span><br><span class="line">req = s.get(InfoUrl)</span><br><span class="line">html = req.text</span><br><span class="line">soup = BeautifulSoup(html,<span class="string">"lxml"</span>)</span><br><span class="line">trs = soup.find_all(<span class="string">"tr"</span>)</span><br><span class="line">Infos = &#123;&#125;</span><br><span class="line">keys = []</span><br><span class="line">vals = []</span><br><span class="line">print(trs)</span><br><span class="line"><span class="keyword">for</span> tr <span class="keyword">in</span> trs[<span class="number">1</span>:<span class="number">-1</span>]:</span><br><span class="line">    tds = tr.find_all(<span class="string">"td"</span>)</span><br><span class="line">    <span class="keyword">if</span> len(tds) &lt; <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    print(<span class="string">"---------------------------------------------------"</span>)</span><br><span class="line">    key1 = tds[<span class="number">0</span>].getText()[:<span class="number">-1</span>]</span><br><span class="line">    val1 = tds[<span class="number">1</span>].getText()</span><br><span class="line">    key2 = tds[<span class="number">2</span>].getText()[:<span class="number">-1</span>]</span><br><span class="line">    val2 = tds[<span class="number">3</span>].getText()</span><br><span class="line">    keys.append(key1)</span><br><span class="line">    keys.append(key2)</span><br><span class="line">    vals.append(val1)</span><br><span class="line">    vals.append(val2)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(vals)<span class="number">-1</span>):</span><br><span class="line">    Infos[keys[i]] = vals[i]</span><br><span class="line">print(Infos)</span><br><span class="line">col.insert_one(Infos)</span><br><span class="line"><span class="comment">#print(key1+val1+"\t"+key2+val2)</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">for idx, td in enumerate(tds):</span></span><br><span class="line"><span class="string">if idx in [ 4]:</span></span><br><span class="line"><span class="string">continue</span></span><br><span class="line"><span class="string">print(td.getText())</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure></p>
+<p>解释：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将数据上传到数据库：col.insert_ine(Infos)(插入文件到数据库中)</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -407,8 +402,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/02/在linux上使用git上传文件到码云上/" rel="next" title="在linux上使用git上传文件到码云上">
-                <i class="fa fa-chevron-left"></i> 在linux上使用git上传文件到码云上
+              <a href="/2018/11/02/git笔记/" rel="next" title="git笔记">
+                <i class="fa fa-chevron-left"></i> git笔记
               </a>
             
           </div>
@@ -416,10 +411,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/28/配置双Python环境/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -568,7 +559,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#有网的时候："><span class="nav-number">1.</span> <span class="nav-text">有网的时候：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#没网的时候："><span class="nav-number">2.</span> <span class="nav-text">没网的时候：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#传统爬虫"><span class="nav-number">1.</span> <span class="nav-text">传统爬虫</span></a></li></ol></div>
             
 
           </div>
