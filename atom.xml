@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-29T12:06:32.222Z</updated>
+  <updated>2018-11-02T11:11:24.227Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,28 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>配置双python环境</title>
-    <link href="http://yoursite.com/2019/03/28/%E9%85%8D%E7%BD%AE%E5%8F%8Cpython%E7%8E%AF%E5%A2%83/"/>
-    <id>http://yoursite.com/2019/03/28/配置双python环境/</id>
-    <published>2019-03-28T10:34:17.000Z</published>
-    <updated>2019-03-29T12:06:32.222Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="配置双Python环境："><a href="#配置双Python环境：" class="headerlink" title="配置双Python环境："></a>配置双Python环境：</h1><ul><li>首先查看Python目录：whereis  Python</li><li>然后删除Python2：rm -rf python</li><li>创建Python3链接到原python2的目录上：ln -s /usr/bin/python3 /usr/bin/python</li><li>然后运行python2和python3：python和python2</li><li>最后装上pip2和pip3：sudo apt-get install python3-pip python-pip</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;配置双Python环境：&quot;&gt;&lt;a href=&quot;#配置双Python环境：&quot; class=&quot;headerlink&quot; title=&quot;配置双Python环境：&quot;&gt;&lt;/a&gt;配置双Python环境：&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;首先查看Python目录：whereis  Py
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>git笔记</title>
