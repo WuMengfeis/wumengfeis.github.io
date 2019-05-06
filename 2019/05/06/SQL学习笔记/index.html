@@ -110,7 +110,7 @@
 <meta property="og:site_name" content="努力吧，未来是你的">
 <meta property="og:description" content="SQL基础用法1、数据库以及数据表的创建12345678create database  数据库名称  //数据库的创建create table 表名称  //数据表的创建(列名称1 数据类型,列名称2 数据类型,列名称3 数据类型,....)    数据类型 描述     integer(size)int(size)smallint(size)tinyint(size) 仅容纳整数。在括号内规定">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-06T13:00:21.906Z">
+<meta property="og:updated_time" content="2019-05-06T13:04:20.955Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL学习笔记">
 <meta name="twitter:description" content="SQL基础用法1、数据库以及数据表的创建12345678create database  数据库名称  //数据库的创建create table 表名称  //数据表的创建(列名称1 数据类型,列名称2 数据类型,列名称3 数据类型,....)    数据类型 描述     integer(size)int(size)smallint(size)tinyint(size) 仅容纳整数。在括号内规定">
@@ -389,7 +389,48 @@
 </tr>
 </tbody>
 </table>
-<p>persons表<br>|id|Lastname|FirstName|Address|City|<br>|—|—|—|—|—|<br>|1|Adams|John|Oxford Street|London|<br>|2|Bush|George|Fifth Avenue|New York|<br>|3|Carter|Thomas|Changan Street|Beijing|<br>|4|Obama|Barack|Pennsylvania Avenue|Washington|</p>
+<p>persons表</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>Lastname</th>
+<th>FirstName</th>
+<th>Address</th>
+<th>City</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Adams</td>
+<td>John</td>
+<td>Oxford Street</td>
+<td>London</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bush</td>
+<td>George</td>
+<td>Fifth Avenue</td>
+<td>New York</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Carter</td>
+<td>Thomas</td>
+<td>Changan Street</td>
+<td>Beijing</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Obama</td>
+<td>Barack</td>
+<td>Pennsylvania Avenue</td>
+<td>Washington</td>
+</tr>
+</tbody>
+</table>
 <p><strong>下列所有例子都使用上面的表</strong></p>
 <p>2、SQL select用法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select LastName,FirstName from Persons</span><br><span class="line">或者</span><br><span class="line">select * from persons</span><br></pre></td></tr></table></figure></p>
 <p><strong>注释</strong>:SQL语句对大小写不敏感</p>
