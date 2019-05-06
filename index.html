@@ -466,12 +466,122 @@
 <tbody>
 <tr>
 <td style="text-align:left">and / or</td>
-<td style="text-align:left">select column_name(s)<br>from table_name<br>where condition<br>and`</td>
-<td>`or condition</td>
+<td style="text-align:left">select column_name(s)<br>from table_name<br>where condition<br>and `</td>
+<td>` or condition</td>
+</tr>
+<tr>
+<td style="text-align:left">alter table (add column)</td>
+<td style="text-align:left">alter table table_name <br>add column_name datatype</td>
+</tr>
+<tr>
+<td style="text-align:left">alter table (drop column)</td>
+<td style="text-align:left">alter table table_name <br>drop column column_name</td>
+</tr>
+<tr>
+<td style="text-align:left">as (alias for column)</td>
+<td style="text-align:left">select column_name as column_alias<br>from table_name</td>
+</tr>
+<tr>
+<td style="text-align:left">as (alias for table)</td>
+<td style="text-align:left">select column_name<br>from table_name  as table_alias</td>
+</tr>
+<tr>
+<td style="text-align:left">between</td>
+<td style="text-align:left">select column_name(s)<br>from table_name<br>where</td>
+<td>column_name<br>between value1 and value2</td>
+</tr>
+<tr>
+<td style="text-align:left">create database</td>
+<td style="text-align:left">create database database_name</td>
+</tr>
+<tr>
+<td style="text-align:left">create index</td>
+<td style="text-align:left">create index index_name<br>on table_name (column_name)</td>
+</tr>
+<tr>
+<td style="text-align:left">create table</td>
+<td style="text-align:left">create table table_name<br>(<br>column_name1 data_type,<br>column_name2 data_type,<br>…….<br>)</td>
+</tr>
+<tr>
+<td style="text-align:left">create unique index</td>
+<td style="text-align:left">create unique index index_name<br>on table_name (column_name)</td>
+</tr>
+<tr>
+<td style="text-align:left">create view</td>
+<td style="text-align:left">create view view_name as<br>select column_name(s)<br>from</td>
+<td>table_name<br>where condition</td>
+</tr>
+<tr>
+<td style="text-align:left">delete from</td>
+<td style="text-align:left">delete from table_name <br>(Note: Deletes the entire table!!)<br>or<br>delete from table_name<br>where condition</td>
+</tr>
+<tr>
+<td style="text-align:left">drop database</td>
+<td style="text-align:left">drop database database_name</td>
+</tr>
+<tr>
+<td style="text-align:left">drop index</td>
+<td style="text-align:left">drop index table_name.index_name</td>
+</tr>
+<tr>
+<td style="text-align:left">drop table</td>
+<td style="text-align:left">deop table table_name</td>
+</tr>
+<tr>
+<td style="text-align:left">group by</td>
+<td style="text-align:left">select column_name1,sum(column_name2)<br>from table_name<br>group by<br>column_name1</td>
+</tr>
+<tr>
+<td style="text-align:left">having</td>
+<td style="text-align:left">select column_name1,sum(column_name2)<br>from table_name<br>group by<br>column_name1<br>having sum(column_name2) condition value</td>
+</tr>
+<tr>
+<td style="text-align:left">in</td>
+<td style="text-align:left">select column_name(s)<br>from table_name<br>where column_name<br>in (value1,value2,..)</td>
+</tr>
+<tr>
+<td style="text-align:left">insert into</td>
+<td style="text-align:left">insert into table_name<br>values (value1, value2,….)<br>or<br>insert into table_name<br>(column_name1, column_name2,…)<br>values (value1, value2,….)</td>
+</tr>
+<tr>
+<td style="text-align:left">like</td>
+<td style="text-align:left">select column_name(s)<br>from table_name<br>where column_name<br>like pattern</td>
+</tr>
+<tr>
+<td style="text-align:left">order by</td>
+<td style="text-align:left">select column_name(s)<br>from table_name<br>order by column_name<br>[ASC`</td>
+<td>`DESC]</td>
+</tr>
+<tr>
+<td style="text-align:left">select</td>
+<td style="text-align:left">select column_name(s)<br>from table_name</td>
+</tr>
+<tr>
+<td style="text-align:left">select *</td>
+<td style="text-align:left">select * from table_name</td>
+</tr>
+<tr>
+<td style="text-align:left">select distinct</td>
+<td style="text-align:left">select distinct column_name(s)<br>from table_name</td>
+</tr>
+<tr>
+<td style="text-align:left">select into<br>(used to create backup copies of tables)</td>
+<td style="text-align:left">select * into<br>new_table_name<br>from original_table_name<br>or<br>select column_name(s)<br>into new_table_name<br>from original_table_name</td>
+</tr>
+<tr>
+<td style="text-align:left">truncate table<br>(deletes only the data inside the table)</td>
+<td style="text-align:left">truncate table<br>table_name</td>
+</tr>
+<tr>
+<td style="text-align:left">update</td>
+<td style="text-align:left">update table_name<br>set column_name=new_value<br>[, column_name=new_value]<br>where column_name=some_value</td>
+</tr>
+<tr>
+<td style="text-align:left">where</td>
+<td style="text-align:left">select column_name(s)<br>from table_name<br>where condition</td>
 </tr>
 </tbody>
 </table>
-<p>alter table (add column)|alter table table_name <br>add column_name datatype|<br>alter table (drop column)|alter table table_name <br>drop column column_name|<br>as (alias for column)|select column_name as column_alias<br>from table_name|<br>as (alias for table)|select column_name<br>from table_name  as table_alias|<br>between|select column_name(s)<br>from table_name<br>where column_name<br>between value1 and value2|<br>create database|create database database_name|<br>create index|create index index_name<br>on table_name (column_name)|<br>create table|create table table_name<br>(<br>column_name1 data_type,<br>column_name2 data_type,<br>…….<br>)|<br>create unique index|create unique index index_name<br>on table_name (column_name)|<br>create view|create view view_name as<br>select column_name(s)<br>from table_name<br>where condition|<br>delete from|delete from table_name <br>(Note: Deletes the entire table!!)<br>or<br>delete from table_name<br>where condition|<br>drop database|drop database database_name|<br>drop index|drop index table_name.index_name|<br>drop table|deop table table_name|<br>group by|select column_name1,sum(column_name2)<br>from table_name<br>group by<br>column_name1|<br>having|    select column_name1,sum(column_name2)<br>from table_name<br>group by<br>column_name1<br>having sum(column_name2) condition value|<br>in|select column_name(s)<br>from table_name<br>where column_name<br>in (value1,value2,..)|<br>insert into|insert into table_name<br>values (value1, value2,….)<br>or<br>insert into table_name<br>(column_name1, column_name2,…)<br>values (value1, value2,….)|<br>like|select column_name(s)<br>from table_name<br>where column_name<br>like pattern|<br>order by|select column_name(s)<br>from table_name<br>order by column_name<br>[ASC<code>|</code>DESC]|<br>select|select column_name(s)<br>from table_name|<br>select <em>|select </em> from table_name|<br>select distinct|select distinct column_name(s)<br>from table_name<br>select into<br>(used to create backup copies of tables)|select * into<br>new_table_name<br>from original_table_name<br>or<br>select column_name(s)<br>into new_table_name<br>from original_table_name|<br>truncate table<br>(deletes only the data inside the table)|    truncate table<br>table_name|<br>update|update table_name<br>set column_name=new_value<br>[, column_name=new_value]<br>where column_name=some_value|<br>where|select column_name(s)<br>from table_name<br>where condition|</p>
 
           
         
